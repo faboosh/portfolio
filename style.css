@@ -1,0 +1,109 @@
+/*$color: #2b2d9c;*/
+body, canvas {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.items div p {
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 1em;
+  transform: initial;
+}
+
+body {
+  background: #153f4c;
+}
+
+canvas {
+  height: 150px;
+  position: absolute;
+}
+
+.header-bg {
+  height: 155px;
+  position: absolute;
+  width: 100vw;
+  background: #2b829c;
+}
+
+header {
+  background: linear-gradient(90deg, #2b829c, #35925a);
+  height: 150px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  transform: rotate(-2deg);
+  margin-top: 20px;
+  margin-left: -20px;
+  width: calc(100vw + 30px);
+}
+
+header #logo {
+  color: white;
+  grid-column: 1;
+  grid-row: 2;
+  font-family: 'Rubik Mono One', sans-serif;
+  padding: 0;
+  font-size: 2em;
+  transform: scale(0.8, 1);
+  align-self: center;
+  justify-self: start;
+  padding-left: 20px;
+}
+
+.items {
+  position: absolute;
+  top: calc(110px - 2vw);
+  right: 80px;
+  grid-column: 2;
+  grid-row: 2;
+  box-sizing: border-box;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  display: grid;
+  justify-self: end;
+}
+
+.items div {
+  grid-row: 2;
+  max-width: 150px;
+  min-width: 100px;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-self: center;
+  width: auto;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  border-collapse: collapse;
+  height: auto;
+  max-height: 50px;
+  background: rgba(43, 130, 156, 0.6);
+  z-index: 2;
+  transition: 0.2s all;
+}
+
+.items div:hover {
+  opacity: initial;
+  background: rgba(43, 130, 156, 0.8);
+}
+
+.items div p {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  line-height: 0;
+  font-size: 0.8em;
+}
+
+.items div i {
+  transform: scale(1.5);
+  margin-top: 10px;
+  color: white;
+  justify-self: center;
+  grid-column: 1 / span 3;
+}
