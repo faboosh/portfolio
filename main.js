@@ -38,7 +38,7 @@ class Line {
             dir: Math.random() > 0.5
         }
 
-        this.maxVel = 0.05;
+        this.maxVel = 0.07;
         this.zIndex = 1 - Math.sin(Math.sin(Math.random() * Math.PI / 2) * Math.PI / 2);
         this.triangleSize = 30 * (0.2 + (this.zIndex * 0.8));
 
@@ -105,3 +105,7 @@ function animate() {
     })
     window.requestAnimationFrame(animate);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('intro-container').classList.remove('rotated');
+})

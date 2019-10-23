@@ -38,21 +38,29 @@
 
 <body>
     <canvas id="header"></canvas>
-    <intro-container>
-        <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/72874605_2692609504097101_4099033709749993472_n.jpg?_nc_cat=105&_nc_oc=AQmtA91aTW0ADNAeGJB3wjbbpUYtRh9XR8VFl0K017WIXD6pXBwMWR6lt5xehmjBv-c&_nc_ht=scontent-arn2-1.xx&oh=34dcace88ad2dbd7c87c537344d06afa&oe=5E59FED0" alt="">
+    <intro-container class="rotated">
+        <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/72874605_2692609504097101_4099033709749993472_n.jpg?_nc_cat=105&_nc_oc=AQmtA91aTW0ADNAeGJB3wjbbpUYtRh9XR8VFl0K017WIXD6pXBwMWR6lt5xehmjBv-c&_nc_ht=scontent-arn2-1.xx&oh=34dcace88ad2dbd7c87c537344d06afa&oe=5E59FED0"
+            alt="">
         <p class="big">Hej!</p>
-        <p>Jag heter <grad-p>Fabian Johansson</grad-p>.</p>
-        <p>Jag pluggar till <grad-p class="alt-bg">Fullstack-Webbutvecklare</grad-p></p>
-        <p>på <grad-p class="alt-bg2">Nackademin</grad-p>.</p>
+        <p>Jag heter <grad-p>Fabian Johansson</grad-p>,</p>
+        <p>jag pluggar till <grad-p class="alt-bg">Fullstack-Webbutvecklare</grad-p>
+        </p>
+        <p>på <grad-p class="alt-bg2">Nackademin</grad-p> i Stockholm.</p>
+        
         <p class="small">
-            Jag är en kreativ person, som älskar pusha tekniska gränser och experimenterera. 
-            <br>Jag trivs som bäst när jag både får designa och jobba med logisk problemlösning.
+            Jag är en kreativ person med stort datorintresse, som älskar att pusha tekniska gränser och experimenterera.
+            Jag trivs som bäst när jag både får designa och jobba med logisk problemlösning.
         </p>
         <button-container>
             <button>Live-demos <i class="fas fa-arrow-alt-circle-right"></i></button>
-            <button>Github <i class="fab fa-github"></i></button>
-            <button>Linkedin <i class="fab fa-linkedin"></i></button>
+            <button class="alt-bg btn-margin">Github <i class="fab fa-github"></i></button>
+            <button class="alt-bg2 btn-margin">Linkedin <i class="fab fa-linkedin"></i></button>
         </button-container>
+
+        <more-about-me style="display:none">
+            <p>Mer om mig</p>
+            <i class="fas fa-arrow-alt-circle-right"></i>
+        </more-about-me>
     </intro-container>
     <script src="main.js"></script>
 </body>

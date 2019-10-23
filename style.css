@@ -18,7 +18,8 @@ intro-container p, intro-container button, .title p, .items div p {
 }
 
 body {
-  background: #154f59;
+  background: #266771;
+  perspective: 600px;
 }
 
 canvas {
@@ -27,28 +28,34 @@ canvas {
   position: absolute;
 }
 
+.rotated {
+  transform: translate(-50%, -100%) rotateX(-90deg);
+}
+
 intro-container {
+  transform: translate(-50%, 40%) rotateX(0deg);
+  backface-visibility: hidden;
   position: absolute;
   flex-direction: column;
   justify-content: baseline;
   align-content: baseline;
-  top: 45%;
+  top: 100%;
   width: 100%;
-  max-width: 800px;
+  max-width: 720px;
   display: flex;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 20px;
-  padding: 50px;
+  padding: 39px;
 }
 
 intro-container img {
-  height: 175px;
-  width: 175px;
+  height: 180px;
+  width: 180px;
   border: 2px solid white;
   border-radius: 100px;
   position: absolute;
-  margin-left: calc(100% - 300px);
-  filter: hue-rotate(360);
+  margin-top: -6px;
+  margin-left: 67%;
 }
 
 intro-container p {
@@ -56,16 +63,14 @@ intro-container p {
   font-size: 1.5em;
   text-align: left;
   margin: 0;
-  margin-left: 50px;
-  max-width: 665px;
 }
 
 intro-container grad-p {
-  background: linear-gradient(90deg, #bbd036, #7bc02d);
+  background: linear-gradient(90deg, #becb64, #8fc551);
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  color: transparent;
+  color: rgba(255, 255, 255, 0.1);
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   text-align: left;
@@ -74,37 +79,44 @@ intro-container grad-p {
 }
 
 intro-container .small {
-  margin-top: 20px;
+  margin-left: 0;
+  margin-top: 15px;
   font-family: 'Roboto', sans-serif;
   font-size: 1.2em;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
   line-height: 1.5em;
   border: 0px solid white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 15px;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 intro-container .big {
-  margin-left: 50px;
   text-align: left;
   font-size: 8em;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: -34px;
+  margin-left: -9px;
 }
 
 intro-container i {
   transition: 0.2s all;
 }
 
+intro-container button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 intro-container button {
-  margin-left: 50px;
   margin-top: 30px;
-  border: 2px solid white;
+  border: none;
   height: 80px;
   border-radius: 10px;
-  width: 200px;
+  width: 100%;
   font-size: 1.5em;
-  background: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(90deg, #becb64, #8fc551);
   transition: 0.2s all;
   color: white;
   outline: none;
@@ -112,13 +124,11 @@ intro-container button {
 }
 
 intro-container button:hover {
-  filter: brightness(1.2);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.05);
+  filter: brightness(1.1);
 }
 
 intro-container button:hover > i {
-  transform: scale(1.15);
+  transform: rotate(360deg);
 }
 
 intro-container button:focus {
@@ -126,18 +136,22 @@ intro-container button:focus {
 }
 
 intro-container .alt-bg {
-  background-image: linear-gradient(90deg, #2d7bc0, #2d63c0);
+  background-image: linear-gradient(90deg, #518fc5, #517cc5);
 }
 
 intro-container .alt-bg2 {
-  background-image: linear-gradient(90deg, #c02d94, #c02d7b);
+  background-image: linear-gradient(90deg, #c551a3, #c5518f);
+}
+
+intro-container .btn-margin {
+  margin-left: 30px;
 }
 
 .header-bg {
   height: 155px;
   position: absolute;
   width: 100vw;
-  background: #c02dac;
+  background: #c551b6;
 }
 
 .content {
@@ -148,7 +162,7 @@ intro-container .alt-bg2 {
 
 .center {
   grid-column: 2;
-  background: #972387;
+  background: #aa399c;
   width: 100%;
   height: 100vh;
 }
@@ -160,7 +174,7 @@ intro-container .alt-bg2 {
   margin-left: -40px;
   margin-right: -40px;
   height: 120px;
-  background: linear-gradient(90deg, #2d7bc0, #2d63c0);
+  background: linear-gradient(90deg, #518fc5, #517cc5);
   padding-top: 7.5px;
   box-sizing: border-box;
 }
@@ -174,7 +188,7 @@ intro-container .alt-bg2 {
 }
 
 header {
-  background: linear-gradient(90deg, #2d7bc0, #2d63c0);
+  background: linear-gradient(90deg, #518fc5, #517cc5);
   height: 150px;
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -210,7 +224,7 @@ header #logo {
   grid-template-rows: repeat(3, 1fr);
   display: grid;
   justify-self: end;
-  background: linear-gradient(90deg, #2d7bc0, #2d63c0);
+  background: linear-gradient(90deg, #518fc5, #517cc5);
   height: 50px;
   border-radius: 10px;
   display: none;
@@ -233,7 +247,7 @@ header #logo {
   border-collapse: collapse;
   height: auto;
   max-height: 50px;
-  background: rgba(192, 45, 172, 0);
+  background: rgba(197, 81, 182, 0);
   z-index: 2;
   transition: 0.2s all;
 }
