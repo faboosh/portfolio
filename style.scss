@@ -35,7 +35,7 @@ $titleoverlap: 40px;
 body{
     @extend %restmarginpadding;
     background: darken($accent, 25);
-    perspective: 600px;
+    //perspective: 600px;
 }
 
 canvas {
@@ -52,13 +52,13 @@ canvas {
 intro-container{
     @extend %absolutecenter;
     //transition: all 0.5s ease-in-out 0.5s;
-    transform: translate(-50%, 40%) rotateX(0deg);
+    //transform: translate(-50%, 40%) rotateX(0deg);
     backface-visibility: hidden;
     position: absolute;
     flex-direction: column;
     justify-content: baseline;
     align-content: baseline;
-    top: 100%;
+    top: 45%;
     width: 100%;
     max-width: 720px;
     display: flex;

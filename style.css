@@ -19,7 +19,6 @@ intro-container p, intro-container button, .title p, .items div p {
 
 body {
   background: #266771;
-  perspective: 600px;
 }
 
 canvas {
@@ -33,13 +32,12 @@ canvas {
 }
 
 intro-container {
-  transform: translate(-50%, 40%) rotateX(0deg);
   backface-visibility: hidden;
   position: absolute;
   flex-direction: column;
   justify-content: baseline;
   align-content: baseline;
-  top: 100%;
+  top: 45%;
   width: 100%;
   max-width: 720px;
   display: flex;
