@@ -2,9 +2,9 @@ let canvas, pen, w, h, startX, startY;
 
 function updateRes() {
     w = window.innerWidth;
-    h = getComputedStyle(document.querySelector('#header')).height.replace('px', '');
+    h = window.innerHeight;
     canvas.width = w;
-    canvas.height = h
+    canvas.height = h;
     lines = [];
     for (let i = 0; i < 70; i++) {
         lines.push(new Line());
