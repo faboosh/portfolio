@@ -212,20 +212,20 @@ header #logo {
 
 .items {
   position: absolute;
-  bottom: 20px;
+  bottom: 12%;
   left: 50%;
   transform: translate(-50%, 0);
   grid-column: 2;
   grid-row: 2;
   box-sizing: border-box;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
   display: grid;
   justify-self: end;
-  background: linear-gradient(90deg, #518fc5, #517cc5);
-  height: 50px;
+  background: transparent;
+  height: 80px;
   border-radius: 10px;
-  display: none;
+  z-index: 2;
 }
 
 .items div {
@@ -243,8 +243,7 @@ header #logo {
   grid-template-rows: repeat(2, 1fr);
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   border-collapse: collapse;
-  height: auto;
-  max-height: 50px;
+  height: 80px;
   background: rgba(197, 81, 182, 0);
   z-index: 2;
   transition: 0.2s all;
@@ -256,16 +255,17 @@ header #logo {
 }
 
 .items div p {
+  margin-top: 20px;
   grid-column: 1 / span 3;
-  grid-row: 2;
+  grid-row: 1;
   line-height: 0;
-  font-size: 0.8em;
+  font-size: 1.2em;
 }
 
 .items div i {
-  transform: scale(1.5);
-  margin-top: 10px;
+  transform: scale(2) rotate(90deg);
   color: white;
   justify-self: center;
+  align-self: center;
   grid-column: 1 / span 3;
 }

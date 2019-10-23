@@ -1,10 +1,4 @@
-//$color: #c02dac;
 $color: #c551b6;
-//$color: #cca358;
-//$color: #2b829c;
-//$color: #b69b00;
-//$color: #5f9e6f;
-//$color: #ce9a0c;
 $height: 150px;
 $margin: 30px;
 $accent: adjust-hue($color, -120);
@@ -134,7 +128,6 @@ intro-container{
         border: none;
         height: 80px;
         border-radius: 10px;
-        //width: 200px;
         width: 100%;
         font-size: 1.5em;
         background: linear-gradient(90deg, lighten($accent2, 5), adjust-hue($accent2, 20));
@@ -238,25 +231,24 @@ header {
  
 }
 
-.items{
-    
+.items {
     position: absolute;
-    bottom: 20px;
+    bottom: 12%;
     left: 50%;
     transform: translate(-50%, 0);
     grid-column: 2;
     grid-row:2;
     box-sizing: border-box;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
     display: grid;
     justify-self: end;
-    background: $gradient;
-    height: 50px;
+    background: rgba(0, 0, 0, 0);
+    height: 80px;
     border-radius: 10px;
-    display: none;
+    z-index: 2;
 
-    div{      
+    div{  
         border-radius: 10px;
         grid-row:2;   
         max-width: 150px;
@@ -271,8 +263,7 @@ header {
         grid-template-rows: repeat(2, 1fr);
         border-bottom: 1px solid rgba(255, 255, 255, 0);
         border-collapse: collapse;
-        height: auto;
-        max-height: 50px;
+        height: 80px;
         background: rgba($color, $alpha: 0);
         z-index: 2;
         transition: 0.2s all;
@@ -282,18 +273,20 @@ header {
             background: rgba(white, $alpha: 0.1);
         }
 
-        p{
-            @extend %centeredtext;             
+        p {
+            @extend %centeredtext;
+            margin-top: 20px;             
             grid-column: 1 / span 3;
-            grid-row: 2;
+            grid-row: 1;
             line-height: 0;
-            font-size: 0.8em;
+            font-size: 1.2em;
         }
-        i{  
-            transform: scale(1.5);
-            margin-top: 10px;
+
+        i {  
+            transform: scale(2) rotate(90deg);
             color: white;
             justify-self: center;
+            align-self: center;
             grid-column: 1 / span 3;
         }
     }

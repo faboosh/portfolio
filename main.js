@@ -19,8 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     pen = canvas.getContext('2d');
     window.addEventListener('resize', updateRes);
     updateRes();
-    startX = w * Math.random();
-    startY = h * Math.random();
     animate();
 })
 
