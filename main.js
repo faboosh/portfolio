@@ -6,7 +6,7 @@ function updateRes() {
     canvas.width = w;
     canvas.height = h
     lines = [];
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 70; i++) {
         lines.push(new Line());
     }
     console.log('changed res');
@@ -31,17 +31,15 @@ class Line {
             max: w,
             dir: Math.random() > 0.3
         }
+
         this.y = {
             pos: h * Math.random(),
             max: h,
             dir: Math.random() > 0.5
         }
 
-
         this.maxVel = 0.05;
         this.zIndex = 1 - Math.sin(Math.sin(Math.random() * Math.PI / 2) * Math.PI / 2);
-        console.log(this.zIndex);
-
         this.triangleSize = 30 * (0.2 + (this.zIndex * 0.8));
 
         this.vel = {
@@ -85,11 +83,6 @@ class Line {
         pen.beginPath();
         pen.strokeStyle = `rgba(255, 255, 255, ${0.2 + this.zIndex * 0.2})`;
         pen.lineWidth = this.triangleSize / 20;
-        pen.arc(this.x.pos, this.y.pos, this.triangleSize / 10, 0, Math.PI * 2);
-        pen.moveTo(this.x.pos + this.triangleSize / 5 + this.triangleSize, this.y.pos + this.triangleSize / 2);
-        pen.arc(this.x.pos + this.triangleSize, this.y.pos + this.triangleSize / 2, this.triangleSize / 10, 0, Math.PI * 2);
-        pen.moveTo(this.x.pos + this.triangleSize / 5, this.y.pos + this.triangleSize);
-        pen.arc(this.x.pos, this.y.pos + this.triangleSize, this.triangleSize / 10, 0, Math.PI * 2);
         pen.moveTo(this.x.pos, this.y.pos);
         pen.lineTo(this.x.pos + this.triangleSize, this.y.pos + this.triangleSize / 2);
         pen.lineTo(this.x.pos, this.y.pos + this.triangleSize);

@@ -1,11 +1,10 @@
-/*$color: #2b2d9c;*/
 body, canvas {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
-.items div p {
+.title p, .items div p {
   font-family: 'Nunito', sans-serif;
   text-align: center;
   color: white;
@@ -14,7 +13,7 @@ body, canvas {
 }
 
 body {
-  background: #153f4c;
+  background: #4c153e;
 }
 
 canvas {
@@ -26,11 +25,44 @@ canvas {
   height: 155px;
   position: absolute;
   width: 100vw;
-  background: #2b829c;
+  background: #9c2b80;
+}
+
+.content {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 600px) 1fr;
+}
+
+.center {
+  grid-column: 2;
+  background: #74205f;
+  width: 100%;
+  height: 100vh;
+}
+
+.title {
+  width: calc(100% + $titleoverlap * 2);
+  transform: rotate(0deg);
+  margin-top: -80px;
+  margin-left: -40px;
+  margin-right: -40px;
+  height: 120px;
+  background: linear-gradient(90deg, #9c2b80, #5c3592);
+  padding-top: 7.5px;
+  box-sizing: border-box;
+}
+
+.title p {
+  font-family: 'Rubik Mono One', sans-serif;
+  align-self: center;
+  justify-self: start;
+  font-size: 2em;
+  transform: scale(0.8, 1);
 }
 
 header {
-  background: linear-gradient(90deg, #2b829c, #35925a);
+  background: linear-gradient(90deg, #9c2b80, #5c3592);
   height: 150px;
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -83,14 +115,14 @@ header #logo {
   border-collapse: collapse;
   height: auto;
   max-height: 50px;
-  background: rgba(43, 130, 156, 0.6);
+  background: rgba(156, 43, 128, 0.6);
   z-index: 2;
   transition: 0.2s all;
 }
 
 .items div:hover {
   opacity: initial;
-  background: rgba(43, 130, 156, 0.8);
+  background: rgba(156, 43, 128, 0.8);
 }
 
 .items div p {
